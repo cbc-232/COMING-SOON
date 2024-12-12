@@ -1,0 +1,75 @@
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+body {
+  background: linear-gradient(135deg, #1E40AF, #FBBF24, #1E40AF);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  font-family: 'Arial', sans-serif;
+  color: white;
+}
+
+.logo {
+  animation: fadeIn 1s ease-out, pulse 3s infinite;
+}
+
+.countdown-container {
+  animation: fadeIn 1.5s ease-out;
+}
+
+.countdown-item {
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.countdown-item:hover {
+  transform: translateY(-10px);
+  background-color: rgba(255,255,255,0.3);
+}
+
+.countdown-item div:first-child {
+  color: #1E40AF; /* Blue for numbers */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.btn-primary {
+  background-color: #1E40AF; /* Blue */
+  color: #FBBF24; /* Yellow */
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #FBBF24; /* Yellow */
+  color: #1E40AF; /* Blue */
+  transform: scale(1.05);
+}
+
+.btn-outline {
+  border-color: #FBBF24; /* Yellow */
+  color: #FBBF24; /* Yellow */
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background-color: #FBBF24; /* Yellow */
+  color: #1E40AF; /* Blue */
+  transform: scale(1.05);
+}
